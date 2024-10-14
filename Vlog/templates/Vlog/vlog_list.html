@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlog List</title>
+</head>
+
+<body>
+    <h1>Vlogs</h1>
+
+    <ul>
+        {% for vlog in vlogs %}
+        <li>vlog title-- <h1> {{ vlog.title }}</h1> by <h3>{{ vlog.user.name }}</h3>,
+            <br>Vlogger-email -- <br>
+            <h3>{{ vlog.user.email }}</h3> (Published on {{ vlog.published_date }} )<br>
+            <h2>{{ vlog.content }}</h2>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>
